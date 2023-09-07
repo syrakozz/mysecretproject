@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+
+<script>
+
+
+
+function process(){
+
+
+let x = 5+5;
+
+
+return x;
+
+}
+
+
+
+function maketree(symbol){
+
+let underscore = ""; // ___
+let pipe = "" //||
+let tree = ""; // *
+
+let maxtreesize;
+
+
+
+maxtreesize = 10;
+
+
+
+
+
+(maxtreesize>10)?alert("maxtreesize is bigger than 10"):alert("maxtreesize is less than 10")
+
+
+for(let i = 0 ; i<=maxtreesize;i++){
+let star = "";
+    for(let j = 0 ; j<=2*i;j++){
+			star += symbol;
+    }
+    
+    tree+=star+"<br>";
+
+}
+
+    for(let i =0;i<2;i++){
+		pipe+="|"
+    }
+    
+    
+    for(let i =0;i<maxtreesize*2;i++){
+		underscore+="_"
+    }
+   
+    
+    document.getElementById("pipe1").innerHTML=pipe;
+    document.getElementById("pipe2").innerHTML=pipe;
+    document.getElementById("underscore").innerHTML=underscore;
+       
+    document.getElementById("result").innerHTML=tree;
+       
+       
+       
+       
+    
+
+
+
+}
+
+</script>
+
+<body>
+
+
+<div style="margin:auto;width:600px;text-align:center">
+
+<button onclick="maketree('A')" > test</button>
+
+<div id="result"> </div>
+<div id="underscore"> </div>
+<div id="pipe1"> </div>
+<div id="pipe2"> </div>
+</div>
+
+
+
+</body>
+
+</html>
